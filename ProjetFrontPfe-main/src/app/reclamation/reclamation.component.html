@@ -1,0 +1,128 @@
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+     <app-navbar [place] = 3 ></app-navbar>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      
+    </section><!-- Breadcrumbs Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+          <div class="section-header">
+              <h3 [style.color]="data.textcolor" class="section-title">{{ 'ReclamationComponent.Réclamer' | translate }}</h3>
+              <p class="section-description">{{ 'ReclamationComponent.satisfaction' | translate }} </p>
+          </div>
+
+         
+          <div class="container">
+
+
+
+            <div class="row justify-content-center align-items-center">
+              <div class="col-lg-6 col-md-6">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h3 style="text-align: center;" class="fix1" [style.color]="data.textcolor">
+                     {{ 'ReclamationComponent.Réclamation' | translate }} 
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <form #f="ngForm" (ngSubmit)="addreclamation(f)">
+                      <div *ngIf="errorMessage" class="alert alert-danger">
+                        {{ errorMessage }}
+                      </div>
+                  
+                      <div *ngIf="successMessage" class="alert alert-success">
+                        {{ successMessage }}
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3"><b>{{ 'ReclamationComponent.Télephone' | translate }}</b></label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" placeholder="Telephone" value={{telephone}} aria-label="Username"
+                          aria-describedby="basic-addon1" required minlength="8">
+                        </div>
+
+                    </div>
+                     <br>
+
+                     <div class="form-group row">
+                        <label class="col-sm-3"><b>{{ 'ReclamationComponent.Agence' | translate }} </b></label>
+                        <div class="col-sm-9">
+                          <select class="form-select" id="inputGroupSelect01" #id_agence="ngModel" ngModel name="id_agence" required>
+                            <option value="" selected disabled>{{ 'ReclamationComponent.Selectionner' | translate }}</option>
+                            <option *ngFor="let agence of agences" [value]="agence.code_Agence">{{agence.libelle}}/{{agence.ville}}</option>
+                          </select>
+                        </div>
+
+                    </div>
+                     <br>
+                    <div class="form-group row">
+                      <label class="col-sm-3"><b>{{ 'ReclamationComponent.Sujet' | translate }}</b></label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="{{ 'ReclamationComponent.Saisir' | translate }}" aria-label="Username" required
+                          #objectif_Reclamation="ngModel" ngModel name="objectif_Reclamation" aria-describedby="basic-addon1">
+                     
+                      </div>
+
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-sm-3"><b>{{ 'ReclamationComponent.Description' | translate }}</b></label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control" #contenu_Reclamation="ngModel" ngModel name="contenu_Reclamation" required placeholder="{{ 'ReclamationComponent.Décrivez' | translate }}"
+                      aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                  <label class="col-sm-3"><b>{{ 'ReclamationComponent.Attachment' | translate }}</b></label>
+                  <div class="col-sm-9">
+                  <input class="form-control form-control-lg" id="formFileLg" type="file" (change)="select($event)" name="document">
+                  </div>
+
+              </div>
+                 
+                    
+                      <div>
+                      
+                        </div>
+                      <br>
+                      <div class="form-group">
+
+
+                        <button type="submit"  [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton"  
+                            class="btn btn-primary fix2">
+                            <i class="fas fa-email"> </i>{{ 'ReclamationComponent.Envoyer' | translate }}
+
+                        </button>
+                        <br>
+
+                    </div>
+                    </form>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+      </div>
+  </section><!-- End Portfolio Section -->
+
+   
+   
+    
+  <app-footer-componment></app-footer-componment>
+
+
+

@@ -1,0 +1,108 @@
+/* Styling for the form */
+.card-header {
+    background-color: #008B8B;
+    color: #fff;
+  }
+  .navbar-logo {
+    width: 50px;
+    height: auto;
+  }
+  .form-control:focus {
+    border-color: #008B8B;
+    box-shadow: 0 0 0 0.25rem rgba(0, 139, 139, 0.25);
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  .btn-primary {
+    background-color: #008B8B;
+    border-color: #008B8B;
+  }
+  
+  .btn-primary:hover {
+    background-color: #007777;
+    border-color: #007777;
+  }
+  
+  /* Animation for the form */
+  .card {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling for the navbar */
+  .navbar-dark {
+    background-color: #343a40;
+  }
+  
+  .navbar-dark .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+  
+  .navbar-dark .navbar-nav .active > .nav-link,
+  .navbar-dark .navbar-nav .nav-link.active,
+  .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .show > .nav-link {
+    color: #ffc107;
+    background-color: #343a40;
+  }
+  
+  .navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+  }
+  
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  @media (min-width: 1001px){
+    .user-avatar {
+      width: 30px;
+      height: 30px;
+      display: block;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      border-radius: 50px;
+      border-color: #828181;
+      border-style: solid;
+      border-width: 2px;
+      margin: auto;
+  }
+  .mobile{
+    display: none;
+  }
+    
+  }
+  @media (max-width: 1000px){
+    .menuu{
+      background-color: #343a40!important;
+      margin-top: 20rem!important;
+      padding: 10px!important;
+    }
+    .mobile{
+      display: block;
+    }
+  }
+  
+
+

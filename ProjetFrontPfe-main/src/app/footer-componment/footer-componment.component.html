@@ -1,0 +1,30 @@
+
+<footer id="footer">
+    <div class="footer-top">
+     
+       
+            <div class="copyright">
+                &copy; Copyright <strong>Express display</strong>.   {{ 'footer.societe' | translate }}
+              
+            </div>
+            <div class="credits">
+                {{ 'footer.developpeurs' | translate }}
+  
+            
+
+            </div>
+            <div class="credits" style="align-items: center;">
+                <div class="dropdown">
+                    {{ 'footer.language' | translate }}
+                    <select id="lang" (change)="changeLanguage($event)" class="form-select" style="display: inline-block;width: fit-content;" aria-label="Default select example">
+                        <option [selected]='Lang === "En"' value="En" id="En">
+                             En  <img src="../assets/img/En.png" />
+
+                          </option>            
+                                      <option [selected]='Lang === "Fr"'   value="Fr" id="Fr" >Fr <img src="../assets/img/Fr.png"/>
+                                      </option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+  </footer>

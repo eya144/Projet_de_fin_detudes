@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:  #F7F7F7;
+    color: black;
+  }
+    .account-settings .user-profile {
+        margin: 0 0 1rem 0;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    .account-settings .user-profile .user-avatar {
+        margin: 0 0 1rem 0;
+    }
+    .account-settings .user-profile .user-avatar img {
+        width: 90px;
+        height: 90px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+    }
+    .account-settings .user-profile h5.user-name {
+        margin: 0 0 0.5rem 0;
+    }
+    .account-settings .user-profile h6.user-email {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .custom-margin {
+      margin-right: 10px;
+  }
+    .account-settings .about {
+        margin: 1rem 0 0 0;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .card {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        margin-bottom: 1rem;
+        border-color: #D2D2D2;
+    }
+    .form-control {
+        border: 1px solid #D2D2D2;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        font-size: 1.1rem;
+        background: #F2F2F2;
+        border-radius: 8px;
+    }
+    .fix1{
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    .fix2{
+      font-size: 1.75rem;
+    }
+    .button{
+      width: 200px;
+      height: 50px;
+      font-size: 18px;
+      font-weight: bold;
+    }

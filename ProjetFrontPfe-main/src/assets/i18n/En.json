@@ -1,0 +1,244 @@
+{
+  "updateAccount": {
+    "imagebox" : "Here is your personal information. Rest assured that they are protected.",
+    "imagebox2" : "Dear Client",
+    "personalDetails" : "Personal details",
+    "Nom" : "Name",
+    "Prénom" : "First name",
+    "Ville" : "City",
+    "Télephone" : "Phone",
+    "DateNaissance" : "Date of birth",
+    "ButtonModifier" : "Edit",
+    "ButtonSupprimé" : "Delete"
+  },
+  "Login": {
+    "Connectez-Vous": "Login",
+    "numtel": "Phone number",
+    "password": "Password",
+    "ButtonSuivant": "next",
+    "ButtonCréer": "Create an account",
+    "ButtonOublié": "Forgot your password"
+  },
+  "Register": {
+    "Register": "Register",
+    "numtel": "Phone number",
+    "vérification": "We will send you an SMS containing a 6-digit verification code.",
+    "Nom" : "Name",
+    "Prénom" : "First name",
+    "password": "Password",
+    "Confirmer": "Confirm password",
+    "Ville" : "City",
+    "DateNaissance" : "Date of birth",
+    "ButtonSuivant": "next",
+    "code": "Verification code...",
+    "Merci": "thank you for your information!",
+    "informations": "Your information has been saved!",
+    "Desolé": "Sorry !",
+    "réessayer": "Your information has not been saved! You can try again !",
+    "login": "Login to your account",
+    "ButtonOublié": "Forgot your password "
+  },
+  "navBar": {
+    "Accueil": "Home",
+    "Services": "Services",
+    "Réclamation": "Claims",
+    "Réponse": "Response to Complaint",
+    "Ajouter": "Add Complaint",
+    "Liste": "Complaint's List",
+    "connecter": "Log in",
+    "inscrire": "Register",
+    "Compte": "My account",
+    
+    "déconnecter": "Sign out"
+  },
+  "home": {
+    "bienvenus": "Welcome",
+    "Satisfaction": "Your satisfaction is our priority",
+    "Réserver": "Book an appointment",
+    "connecter": "Log in"
+  },
+  "ReviewComponent": {
+    "avis": "Give your opinion",
+    "satisfaction": "We aim for your satisfaction. Do not hesitate to send us your opinions so that we can improve the quality of our services.",
+    "Télephone": "Phone",
+    "Service": "Service",
+    "Commentaire": "Comment",
+    "Envoyer": "Send opinion",
+    "AvisService": "Service Reviews"
+  },
+  "AgencesComponent": {
+    "Choisir": "Choose an agency",
+    "Rechercher": "Search: all agencies",
+    "villes": "All cities",
+    "gouvernorats": "All governorates",
+    "réserver": "book an appointment",
+    "Ajouter": "Add a Review",
+    "Détails": "Agency Details",
+    "maps": "Location in google maps",
+    "DétailsRDV": "Appointment details"
+  },
+  "VoirreclamationComponent": {
+    "réclamation": "Complaint",
+    "Votre": "Your complaint",
+    "numero": "Claim N°",
+    "Agence": "Agency",
+    "Objectif": "Objective",
+    "Contenu": "Content",
+    "Date": "Date",
+    "Statut": "Status",
+    "NonRepond": "No Answer",
+    "Resolue": "Solved",
+    "Document": "Documentation",
+    "Attachment": "Attachment",
+    "noDocument": "No Documentation"
+  },
+  "agendaComponent": {
+    "Réserver": "Book an appointment",
+    "rendez": "Book an appointment with one of our partners.",
+    "telephone": "phone",
+    "agence": "Agency",
+    "service": "service",
+    "Sujet": "Subject",
+    "Durée": "Choose Duration",
+    "duree15min": "duration 15min",
+    "duree30min": "duration 30min",
+    "duree1h": "duration 1 hour",
+    "Confirmer": "Confirm",
+    "Document": "Documentation"
+  },
+  "ServiceslistComponent": {
+    "Choisir": "Choose a Service",
+    "Rechercher": "Find a service",
+    "Rendez": "Appointment's",
+    "aime": "Feedback"
+  },
+  "ModifierclientComponent": {
+    "Modifier": "Edit Your Personal Details",
+    "Télephone": "Phone",
+    "Nom": "Name",
+    "Prénom": "First name",
+    "Ville": "City",
+    "Date": "Date of birth",
+    "Photo": "Profile Photo",
+    "bouton": "Save"
+  },
+  "ReclamationComponent": {
+    "Réclamer": "Add a Claim",
+    "satisfaction": "We aim for your satisfaction. Do not hesitate to inform us of your complaints so that we can improve the quality of our services.",
+    "Réclamation": " Claim ",
+    "Télephone": "Phone",
+    "Agence": "Agency",
+    "Sujet": "Subject",
+    "Selectionner": "Select an Agency",
+    "Saisir": "Enter the subject of the complaint",
+    "Description": "Description",
+    "Décrivez": "Describe your complaint",
+    "Attachment": "Attachment",
+    "Envoyer": "Send"
+  },
+  "DetailsagenceComponent": {
+    "Details": " Agency details",
+    "propos": "About Us",
+    "Agence": " Agency ",
+    "Télephone": "Phone",
+    "Fax": "Fax",
+    "Chef": "Head of agency",
+    "Services": "Services Provided",
+    "Saisir": "Brief description",
+    "description": "Description",
+    "travail": "Work timetable",
+    "Lundi": "Monday",
+    "Mardi": "Tuesday",
+    "Mercredi": "Wednesday",
+    "Vendredi": "Friday",
+    "Samedi": "SATURDAY",
+    "Jeudi": "THURSDAY",
+    "Horaire":"Working Time"
+  },
+  "ForgetPasswordComponent": {
+    "Forget": " Forget Password",
+    "Password": "Password",
+    "Confirm": "Confirm Password ",
+    "Next": "Next",
+    "Create": "Create an Account",
+    "Login": "Login to Your Account"
+  },
+  "RecoverPasswordComponent": {
+    "Récupérer": "Recover password",
+    "Phone": "Phone Number",
+    "Suivant": "next",
+    "Créer": "Create an account",
+    "Login": "Login to Your Account"
+  },
+  "ListReponsesComponent": {
+    "Réponses": "Your answers",
+    "répondu": "We hope to have answered your problem effectively. If however the problem persists, do not hesitate to visit us so that we can discuss it in more detail. Your satisfaction is our priority and we are here to help.",
+    "Aujourdhui": "Today",
+    "reclamation": "Reply to complaint N°",
+    "Agence": "Agency",
+    "Sujet": "Subject",
+    "Description": "Description",
+    "Date": "Claim date",
+    "Document": "Documentation",
+    "noDocument": "No Documentation",
+    "Voir": "See Complaint",
+    "Attachment": "Attachment",
+
+    "Login": "Sign into your account"
+  },
+  "ResponseComponent": {
+    "Réponses": "Consult Response",
+    "répondu": "We hope to have answered your problem effectively. If however the problem persists, do not hesitate to visit us so that we can discuss it in more detail. Your satisfaction is our priority and we are here to help.",
+    "Aujourdhui": "Aujord'hui",
+    "reclamation": "Response for complaint No.",
+    "Agence": "Agency",
+    "Sujet": "Subject",
+    "Description": "Description",
+    "Date": "Date",
+    "DateRéclamation": "Claim date",
+    "Document": "Document",
+    "Attachment": "Attachment",
+
+    "noDocument": "No Document"
+  },
+  "ListereclamationComponent": {
+    "réclamations": "Your complaints",
+    "répondu": "All your complaints are listed below, pending processing. Please be patient while we respond. Rest assured that you will receive a notification as soon as we have provided a response. We sincerely thank you for your patience and understanding.",
+    "Aujourdhui": "Today",
+    "reclama": "Claim N°",
+    "Agence": "Agency",
+    "Sujet": "Subject",
+    "Description": "Description",
+    "Date": "Date",
+    "DateRéclamation": "Claim date",
+    "Document": "Documentation",
+    "noDocument": "No Documentation",
+    "Voir": "See Complaint",
+    "NonRepond": "No Answer",
+    "Resolue": "Solved",
+    "Attachment": "Attachment",
+    "VoirReponse": "See Answer",
+    "Statut": "Statut"
+  },
+  "AllavisComponent": {
+    "Consulter": "Consult Service Notice ",
+    "agence": "of the agency",
+    "à": "in"
+  },
+  "ErrorPageComponent": {
+    "Error": "404 Error",
+    "launch": "Couldn't launch ",
+    "Page": "Page Not Found - lets take you ",
+    "BACK": "BACK"
+  },
+  "footer": {
+    "language": "Language",
+    "developpeurs":"Designed by Maamouri Eya and El Fekih Moulouk.",
+    "societe":"All rights reserved @2023 "
+  },
+  "Agenda": {
+    "title": "Consult your appointments",
+    "explenation": "See all your appointments with this agency in one place,click on an appointment to delete it.",
+    "cardtitle": "Your appointments"
+  }
+}

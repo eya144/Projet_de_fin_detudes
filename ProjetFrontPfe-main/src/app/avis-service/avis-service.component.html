@@ -1,0 +1,99 @@
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <app-navbar [place]=2></app-navbar>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section class="breadcrumbs">
+            <div class="center">
+
+                <div class="d-flex justify-content-between r">
+                    <h3 class="bold" [style.color]="data.textcolor">Consulter Avis de Service {{keyParams}}</h3>
+                   
+                </div>
+
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <div class="container" data-aos="fade-up">
+               
+
+               
+                <div class="container">
+
+
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3" *ngFor="let avisclient of avis">
+                            <div class="card mb-4">
+                              
+                                <div class="card-body">
+                                    <form>
+                                        
+        
+        
+                                        <div class="account-settings">
+                                            <div class="user-profile">
+                                              <div class="user-avatar">
+                                                <img [src]="'https://codebackend-production.up.railway.app/getImges/' + avisclient.Client.photo">
+                                              </div>
+                                             
+                                              <div>
+                                                <h3>{{avisclient.Client.nom}} {{avisclient.Client.prenom}}</h3>
+                                                <h6>{{avisclient.Service.Agence.libelle}}/{{avisclient.Service.Agence.ville}}</h6>
+                                                <p >{{ avisclient.commentaire }}</p>
+                                            </div>
+                          
+                                            <div style="display: flex; justify-content: center; align-items: center; margin: 0 auto;" class="rating">
+                                              <span *ngFor="let star of stars.slice(avisclient.etoile)" (click)="rate(star)">&#9733;</span>
+                                              <span *ngFor="let star of stars.slice(0, avisclient.etoile)" class="filled" (click)="rate(star)">&#9733;</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      
+                                       
+                                      
+                                       
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section><!-- End Portfolio Section -->
+
+
+
+
+    </main><!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong>Express display</strong>. Tout les droits sont részevés
+                </div>
+                <div class="credits">
+
+                    Designed by Maamouri Eya & El Fekih Moulouk
+                </div>
+            </div>
+
+        </div>
+    </footer><!-- End Footer -->
+
+
+
+</body>

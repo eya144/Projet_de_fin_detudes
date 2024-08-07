@@ -1,0 +1,35 @@
+#map {
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+display: block;
+  background-color: rgba(0,69,121, 0.2);
+  animation-name: slide-right; /* add slide-right animation */
+  animation-duration: 1s; /* set duration to 1 second */
+  animation-fill-mode: forwards; 
+}
+
+.boxe {
+  background-color: #f2f2f2;
+  padding: 8px;
+ 
+  
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  margin-bottom: 20px;
+
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+
+}
+.portfolio-details{
+  background: #F5F5F5;
+}
+.portfolio-info{
+  margin: 10px;
+  background: white;
+}

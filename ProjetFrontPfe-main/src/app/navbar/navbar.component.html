@@ -1,0 +1,74 @@
+<head>
+  <!-- Other head elements -->
+
+  <!-- Include Bootstrap Icons CSS -->
+</head>
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div id="logo">
+      <a href="home"><img  width="80px" height="80px" [src]="data.image" alt=""></a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul id="menuu" class="menuu">
+        <li></li>
+        <li></li>
+
+        <li>
+          <a class="nav-link scrollto" id="first"  href="/home">{{ 'navBar.Accueil' | translate }}</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" id="second" href="/serviceslist">{{ 'navBar.Services' | translate }}</a>
+        </li>
+
+        <li class="dropdown" *ngIf="isLoggedIn">
+          <a class="nav-link scrollto" id="Réclamation" ><span>{{ 'navBar.Réclamation' | translate }}</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <ul>
+            <li *ngIf="isLoggedIn"><a class="nav-link scrollto" href="/reponses">{{ 'navBar.Réponse' | translate }} ({{nb_reponses}})</a></li>
+            <li *ngIf="isLoggedIn"><a class="nav-link scrollto" href="/reclamation">{{ 'navBar.Ajouter' | translate }}</a></li>
+            <li *ngIf="isLoggedIn"><a class="nav-link scrollto" href="/listereclamations">{{ 'navBar.Liste' | translate }}</a></li>
+          </ul>
+        </li>
+        <li *ngIf="isLoggedIn"><a class="nav-link scrollto mobile" href="/updateAccount">{{ 'navBar.Compte' | translate }}</a></li>
+        <li *ngIf="isLoggedIn"><a class="nav-link scrollto mobile" style="cursor: pointer;" (click)="onLogout()">{{ 'navBar.déconnecter' | translate }}</a></li>
+        
+    
+
+        <li *ngIf="!isLoggedIn"><a class="nav-link scrollto" id="login" href="/login">{{ 'navBar.connecter' | translate }}</a></li>
+        <li  *ngIf="!isLoggedIn"><a class="nav-link scrollto" id="register" href="/register">{{ 'navBar.inscrire' | translate }}</a></li>
+        
+      </ul>
+
+
+        <ul>
+          <li class="dropdown" *ngIf="isLoggedIn">
+            <a style=" text-decoration: none;" class="nav-link scrollto">
+              
+              <img class="user-avatar" [src]="currentUser.photo" style="margin-right: 10px;" > <span class="user-name"> {{ currentUser.nom}} {{currentUser.prenom}}</span>
+
+            </a>
+           
+            <ul>
+              <li *ngIf="isLoggedIn"><a class="nav-link scrollto" href="/updateAccount">{{ 'navBar.Compte' | translate }}</a></li>
+              <li *ngIf="isLoggedIn"><a class="nav-link scrollto" style="cursor: pointer;" (click)="onLogout()">{{ 'navBar.déconnecter' | translate }}</a></li>
+            </ul>
+          </li>
+        </ul>
+       
+        <i class="bi bi-list mobile-nav-toggle" (click)="mobileToggle()"></i>
+    </nav><!-- .navbar -->
+    </div>
+  </header>
+
+
+
+<script src="../..assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="../../assets/vendor/aos/aos.js"></script>
+<script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../assets/vendor/php-email-form/validate.js"></script>
+<script src="../../assets/js/main.js"></script>

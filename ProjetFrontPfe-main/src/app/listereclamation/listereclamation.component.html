@@ -1,0 +1,117 @@
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <app-navbar [place] = 3 ></app-navbar>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+        <br>
+        <section id="portfolio" class="portfolio">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3 [style.color]="data.textcolor" class="section-title">{{ 'ListereclamationComponent.réclamations' | translate }}</h3>
+                    <p class="section-description">{{ 'ListereclamationComponent.répondu' | translate }}</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li class="filter-active" (click)="FilterParDate(tel)">{{ 'ListereclamationComponent.Aujourdhui' | translate }}</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+
+
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6" *ngFor="let reclamation of reclamations; let i=index">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3 style="text-align: center;" class="fix1" [style.color]="data.textcolor">
+                                        <i class="fas fa-envelope"></i> {{ 'ListereclamationComponent.reclama' | translate }} {{i+1}}
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                       
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"  ><b>{{ 'ListereclamationComponent.Agence' | translate }} :</b></label>
+                                            <div class="col-sm-9">
+                                                <label type="text"  > {{ reclamation.Agence.libelle }} ,{{reclamation.Agence.ville }}</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ListereclamationComponent.DateRéclamation' | translate }}:</b></label>
+                                            <div class="col-sm-9">
+                                                <label type="date" readonly >{{reclamation.date_Reclamation}}</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ListereclamationComponent.Sujet' | translate }} :</b></label>
+                                            <div class="col-sm-9">
+                                                <label type="text" > {{ reclamation.objectif_Reclamation }}</label>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ListereclamationComponent.Description' | translate }} :</b></label>
+
+                                            <div class="col-sm-9">
+                                                <textarea name="description" readonly class="form-control"
+                                                    [value]="reclamation.contenu_Reclamation"></textarea>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ListereclamationComponent.Statut' | translate }} :</b></label>
+                                            <div class="col-sm-9">
+                                                <span class="badge text-bg-danger fix3" *ngIf="reclamation.repond == 'Non Repond' ; else elseBlock">{{ 'ListereclamationComponent.NonRepond' | translate }}</span>
+                                                
+                                                
+                                                <ng-template #elseBlock><span class="badge text-bg-success fix3">{{ 'ListereclamationComponent.Resolue' | translate }}</span></ng-template>
+
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ListereclamationComponent.Attachment' | translate }} :</b></label>
+                                            <div class="col-sm-9">
+                                                <a style="text-decoration: none;" *ngIf="reclamation.document ; else elseBlockk" class="badge text-bg-success fix3" href="https://codebackend-production.up.railway.app/getFiles/{{reclamation.document}} " 
+                                                    target="_blank" download>{{ 'ListereclamationComponent.Document' | translate }}</a>
+                                                    <ng-template #elseBlockk><span class="badge text-bg-danger fix3">{{ 'ListereclamationComponent.noDocument' | translate }}</span></ng-template>
+                                                </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="form-group">
+                                            <button class="button" type="submit" *ngIf="reclamation.repond=='Repond'"  [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" 
+                                                (click)="viewReponse(reclamation.code_Reclamation)" 
+                                                >
+                                                <i class="fas fa-eye"> {{ 'ListereclamationComponent.VoirReponse' | translate }}</i>
+
+                                            </button>
+                                            <br>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Portfolio Section -->
+    </main><!-- End #main -->
+</body>
+<app-footer-componment></app-footer-componment>

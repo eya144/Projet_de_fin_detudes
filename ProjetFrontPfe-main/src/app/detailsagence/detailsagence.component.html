@@ -1,0 +1,121 @@
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+     <app-navbar [place]=2></app-navbar>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ 'DetailsagenceComponent.Details' | translate }}</h2> 
+          
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+               
+
+               
+
+                <div class="swiper-slide">
+                  <img height="700" width="100" [src]="data.detailimage" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{ 'DetailsagenceComponent.propos' | translate }}</h3>
+              <ul>
+                <li><strong>{{ 'DetailsagenceComponent.Agence' | translate }} </strong>: {{detailsofagence.libelle}}</li>
+                <li><strong>Email</strong>: {{detailsofagence.email_Agence}}</li>
+                <li><strong>{{ 'DetailsagenceComponent.Télephone' | translate }}</strong>: {{detailsofagence.telephone}}</li>
+                <li><strong>{{ 'DetailsagenceComponent.Fax' | translate }}</strong>: {{detailsofagence.fax}}</li>
+                <li><strong>{{ 'DetailsagenceComponent.Chef' | translate }}</strong>: {{detailsofagence.chef_Agence}}</li>
+                <li><strong>{{ 'DetailsagenceComponent.Services' | translate }}</strong>: 
+                  <div class="col-sm-9">
+
+                  <ul>
+                    <li *ngFor="let service of services">{{ service.nom_Service }}</li>
+                  </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="portfolio-info">
+            <div class="portfolio-description">
+              <h2>{{ 'DetailsagenceComponent.description' | translate }}</h2>
+              <p>
+                {{detailsofagence.description}}
+                  </p>
+            </div>
+            </div>
+
+            <div class="portfolio-info"  *ngIf="horairesNumber!=0">
+              <div >
+                <h3>{{ 'DetailsagenceComponent.Horaire' | translate }}</h3>
+                <div class="col-sm-9">
+                  <ul *ngIf="pause==true">
+                    <li>{{ 'DetailsagenceComponent.Lundi' | translate }} {{  horaireCommun.startTime}}/{{  horaireCommun.endTimeM}}  : {{  horaireCommun.startTimeE}}/{{  horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Mardi' | translate }} {{  horaireCommun.startTime}}/{{  horaireCommun.endTimeM}}  : {{  horaireCommun.startTimeE}}/{{  horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Mercredi' | translate }} {{  horaireCommun.startTime}}/{{  horaireCommun.endTimeM}}  : {{  horaireCommun.startTimeE}}/{{  horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Jeudi' | translate }} {{  horaireCommun.startTime}}/{{  horaireCommun.endTimeM}}  : {{  horaireCommun.startTimeE}}/{{  horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Vendredi' | translate }}  {{  horaireCommun.startTime}}/{{  horaireCommun.endTimeM}}  : {{  horaireCommun.startTimeE}}/{{  horaireCommun.endTime}}  </li>
+                    <li *ngIf="choixsamedi">{{ 'DetailsagenceComponent.Samedi' | translate }} {{ horairesamedistart}}/{{ horairesamediend}}  </li>
+    
+                  </ul>
+                  <ul *ngIf="pause==false">
+                    <li>{{ 'DetailsagenceComponent.Lundi' | translate }}  {{ horaireCommun.startTime}}/{{ horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Mardi' | translate }} {{ horaireCommun.startTime}}/{{ horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Mercredi' | translate }} {{ horaireCommun.startTime}}/{{ horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Jeudi' | translate }} {{ horaireCommun.startTime}}/{{ horaireCommun.endTime}}  </li>
+                    <li>{{ 'DetailsagenceComponent.Vendredi' | translate }} {{ horaireCommun.startTime}}/{{ horaireCommun.endTime}}  </li>
+                    <li *ngIf="choixsamedi">{{ 'DetailsagenceComponent.Samedi' | translate }} {{ horairesamedistart}}/{{ horairesamediend}}  </li>
+    
+                  </ul>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+     
+    </section><!-- End Portfolio Details Section -->
+    
+
+  </main><!-- End #main -->
+  <div class="boxe">
+  <div id="map" style="height: 350px;"></div>
+</div>
+
+
+ 
+</body>
+<app-footer-componment></app-footer-componment>

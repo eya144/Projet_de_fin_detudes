@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <app-navbar></app-navbar>
+  </header>
+
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 [style.color]="data.textcolor">{{ 'home.bienvenus' | translate }}</h1>
+      <h2 >{{ 'home.Satisfaction' | translate }}</h2>
+      <div class="button-container"  >
+        <a href="serviceslist" [style.borderColor]="data.backgroundcolorbutton" [style.backgroundColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" class="btn-get-started">{{ 'home.Réserver' | translate }}</a>
+        <a routerLink="/login" *ngIf="!isLoggedIn"  [style.borderColor]="data.backgroundcolorbutton" [style.backgroundColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" class="btn-get-started">{{ 'home.connecter' | translate }}</a>
+      </div>
+     
+    </div>
+  </section>
+
+
+
+ 
+</body>
+<app-footer-componment></app-footer-componment>
+</html>

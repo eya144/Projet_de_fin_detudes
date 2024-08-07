@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	
+
+</head>
+
+<body >
+	<app-navbar></app-navbar>
+
+  <br>
+  <div class="container">
+    <div class="container d-flex  justify-content-center">
+        <div class="row gutters justify-content-center">
+          
+      <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+        <div class="card h-100">
+          <div class="card-header">
+            <h3  [style.color]="data.textcolor" style="text-align: center;padding-top: 10px;" class="fix1">{{ 'ModifierclientComponent.Modifier' | translate }}</h3>
+          </div>
+            <form id="regForm" #f="ngForm" (ngSubmit)="Update(f)">
+          <div class="card-body">
+            
+            <div class="row gutters">
+              
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="website">{{ 'ModifierclientComponent.Télephone' | translate }}</label>
+                  <input type="tel" readonly name="telephone"[(ngModel)]="currentUser.telephone" class="form-control" id="tel">
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="eMail">Email</label>
+                  <input type="email" name="email"  [(ngModel)]="currentUser.email" class="form-control" id="eMail" placeholder="Enter email ID">
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="fullName">{{ 'ModifierclientComponent.Nom' | translate }}</label>
+                  <input type="text" name="nom" class="form-control" [(ngModel)]="currentUser.nom" id="fullName" placeholder="Enter full name">
+                </div>
+              </div>
+             
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="phone">{{ 'ModifierclientComponent.Prénom' | translate }}</label>
+                  <input type="text" id="phone" class="form-control" name="prenom" [(ngModel)]="currentUser.prenom">
+                </div>
+              </div>
+             
+            </div>
+            <div class="row gutters">
+              
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="Street">{{ 'ModifierclientComponent.Ville' | translate }} </label>
+                  <input type="text" class="form-control" name="ville" [(ngModel)]="currentUser.ville" id="Street" placeholder="Enter Street"  >
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-group">
+                  <label style="color: rgb(0, 0, 0);"  for="phone">{{ 'ModifierclientComponent.Date' | translate }}</label>
+                  <input type="date" id="phone" class="form-control" name="dateNaissance" [(ngModel)]="currentUser.dateNaissance">
+                </div>
+              </div>
+             
+            </div>
+              
+             
+              
+             
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+              <div class="form-group">
+                <label  style="color: rgb(0, 0, 0);" for="Street">{{ 'ModifierclientComponent.Photo' | translate }} </label>
+                <input type="file" class="form-control"  name="photo" (change)="select($event)" >  </div>
+            </div>
+           
+                <br>
+                <div class="row gutters">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                    
+                       <button  [style.borderColor]="data.backgroundcolorbutton" [style.backgroundColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" style="display: flex;
+                     justify-content: center;
+                      align-items: center;
+                      text-decoration: none;
+                      height: auto;
+                      margin: 0 auto;" type="submit" id="submit" name="submit" class="btn custom-margin button"  >{{ 'ModifierclientComponent.bouton' | translate }}</button>
+                   </div>
+                  </div>
+                </div>
+                
+              </div>
+            </form>
+            <div *ngIf="errorMessage" class="alert alert-danger">
+                {{ errorMessage }}
+              </div>
+              
+              <div *ngIf="successMessage" class="alert alert-success">
+                {{ successMessage }}
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+  </div>
+</body>
+
+<app-footer-componment></app-footer-componment>
+</html>

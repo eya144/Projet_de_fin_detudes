@@ -1,0 +1,38 @@
+ 
+  .fix1{
+    margin-top: 10px;
+  }
+  .fix2{
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .fix3{
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-family: "Open Sans",Roboto,"Helvetica Neue",Helvetica,Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    color: #fff;
+    background-color: #0d6efd;
+    border: 1px solid transparent;
+    padding: 13px 12px 12px 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-position: -9999px -9999px;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  button:hover{
+    transform: scale(1.1);
+ }

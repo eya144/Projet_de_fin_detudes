@@ -1,0 +1,122 @@
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <app-navbar [place]=3></app-navbar>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <br>
+        <section id="portfolio" class="portfolio">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h3  [style.color]="data.textcolor" class="section-title">{{ 'ResponseComponent.Réponses' | translate }}</h3>
+                    <p class="section-description">{{ 'ResponseComponent.répondu' | translate }}</p>
+                </div>
+
+               
+                <div class="container">
+
+
+
+                    <div class="row">
+                        <div *ngFor="let reponse of reponses; let i=index">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h3 style="text-align: center; " class="fix1" [style.color]="data.textcolor">
+                                        <i class="fas fa-envelope"></i> {{ 'ResponseComponent.reclamation' | translate }} {{ reponse.ReclamationCodeReclamation }}
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"  ><b>{{ 'ResponseComponent.Agence' | translate }} :</b> </label>
+                                            <div class="col-sm-9">
+                                                <label type="text"  > {{ reponse.Agence.libelle }} ,{{reponse.Agence.ville }}</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"  ><b>{{ 'ResponseComponent.Sujet' | translate }} :</b> </label>
+                                            <div class="col-sm-9">
+                                                <label type="date" readonly >{{ reponse.objectif_Reponse }}</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="form-group row">
+                                            <label class="col-sm-3"><b>{{ 'ResponseComponent.DateRéclamation' | translate }}:</b></label>
+                                            <div class="col-sm-9">
+                                                <label type="date" readonly >{{ reponse.date_Reponse }}</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3" ><b>{{ 'ResponseComponent.Description' | translate }} :</b></label>
+                
+                                            <div class="col-sm-9">
+                                                <textarea name="description" readonly class="form-control" [value]="reponse.contenu_Reponse"></textarea>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row" >
+                                            <label class="col-sm-3" ><b>{{ 'ResponseComponent.Date' | translate }} </b></label>
+                                            <div class="col-sm-9" >
+                                                <input type="date" readonly class="form-control"  value="{{reponse.date_Reponse}}"/>
+                                            </div>
+                                        </div>
+                                        <br>
+                                     
+                                        <div class="form-group row" >
+                                            <label class="col-sm-3" ><b>{{ 'ResponseComponent.Attachment' | translate }}</b></label>
+                                            <div class="col-sm-9" >
+                                                <a style="text-decoration: none;" *ngIf="reponse.document; else elseBlock" class="badge text-bg-success fix3"  href="https://codebackend-production.up.railway.app/getReponses/{{reponse.document}}" target="_blank"
+                                                download>{{ 'ResponseComponent.Document' | translate }}</a>
+                                                <ng-template #elseBlock><span class="badge text-bg-danger fix3">{{ 'ResponseComponent.noDocument' | translate }}</span></ng-template>                            
+                                            </div>
+                                        </div>
+                
+                                    <br>
+                                       
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+
+
+
+
+    </main><!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../assets/js/main.js"></script>
+
+
+
+    <app-footer-componment></app-footer-componment>
+</body>

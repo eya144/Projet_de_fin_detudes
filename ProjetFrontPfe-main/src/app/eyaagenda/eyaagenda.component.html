@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<app-navbar [place]=2></app-navbar>
+<br>
+<section class="portfolio">
+<div class="container">
+  <div class="section-header">
+      <h3  [style.color]="data.textcolor" class="section-title">{{ 'agendaComponent.Réserver' | translate }}</h3>
+      <p class="section-description">{{ 'agendaComponent.rendez' | translate }} </p>
+  </div>
+</div>
+<br>
+<div class="container">
+
+    <div class="form-container">
+        
+        <form #f="ngForm"  (ngSubmit)="addrdv(f)" >
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text fix1" id="basic-addon1"><i class="fa fa-phone"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="{{ 'agendaComponent.telephone' | translate }} " aria-label="Username"  disabled aria-describedby="basic-addon1" value="{{telephone}}"> 
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text  fix1" id="basic-addon1"><i class="fa fa-building"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="{{ 'agendaComponent.agence' | translate }}" aria-label="Username"  required disabled  value="{{valParams}}" name="agence" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text fix1" id="basic-addon1"><i class="fa fa-gear"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="{{ 'agendaComponent.service' | translate }}" aria-label="Username" disabled  value="{{keyParams}}" name="service" aria-describedby="basic-addon1" required>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text fix1" id="basic-addon3">{{ 'agendaComponent.Sujet' | translate }}</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url"  #sujet="ngModel" ngModel name="sujet"  aria-describedby="basic-addon3" required>
+          </div>
+         
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01" >{{ 'agendaComponent.Durée' | translate }}</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01"  name="duree" #duree="ngModel" ngModel  required>
+              
+              <option value="15" selected>{{ 'agendaComponent.duree15min' | translate }}</option>
+              <option value="30">{{ 'agendaComponent.duree30min' | translate }}</option>
+              <option value="60">{{ 'agendaComponent.duree1h' | translate }}</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <input type="datetime-local" [(ngModel)]="selectedDate" #time="ngModel" id="rdvdate" name="time" ngModel class="form-control" 
+      [min]="minDateTime()" required>
+              </div>
+         
+          <div class="buttons">
+            <button type="submit"  [style.borderColor]="data.backgroundcolorbutton" [style.backgroundColor]="data.backgroundcolorbutton" [style.color]="data.textbutton"class="btn confirm-button">{{ 'agendaComponent.Confirmer' | translate }}</button>
+          </div>
+        </form>
+      </div>
+
+  </div>
+  <br>
+  <div class="container">
+    <div class="form-container">
+        <div class="calendar-container">
+          <full-calendar #calendar [events]="eventss" [options]="calendarOptions"></full-calendar>
+        </div>
+    </div>
+  </div>
+</section>
+<app-footer-componment></app-footer-componment>

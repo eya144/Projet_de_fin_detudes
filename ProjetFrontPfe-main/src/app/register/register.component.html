@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header id="header" class="fixed-top d-flex align-items-center ">
+
+    <app-navbar  [place]=4></app-navbar>
+  
+  </header><!-- End Header -->
+  
+  <body >
+   <div class="boxe"></div>
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div *ngIf="errorMessage" class="alert alert-danger">
+                    {{ errorMessage }}
+                  </div>
+                  
+                  <div *ngIf="successMessage" class="alert alert-success">
+                    {{ successMessage }}
+                  </div>
+                <div style="float:left; padding: 10px;" >
+                    <a routerLink="/home" class="home-icon">
+                        <i  [style.Color]="data.backgroundcolorbutton" style="size: 40px;" class="fa fa-home" aria-hidden="true"></i>
+                      </a>            
+                            </div>
+                            
+                <form id="regForm" #f="ngForm" (ngSubmit)="createUser(f)">
+                    <h1 id="register">{{ 'Register.Register' | translate }}</h1>
+                    <div class="all-steps" id="all-steps">
+                        <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="step"> 1</span>
+                        <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="step"> 2</span>
+                        <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="step"> 3</span>
+                        <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="step"> 4</span>
+                        <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="step"> 5</span>
+
+
+                    </div>
+                    <div class="tab">
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton"class="input-group-text">
+                                <i class="fa fa-envelope"></i>
+
+                            </span>
+                            <input type="text" class="form-control" placeholder="Email"  #email="ngModel" ngModel name="email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ 'Register.numtel' | translate }}" #telephone="ngModel" ngModel  name="telephone">
+
+                        </div>
+                        <h6 style="text-align: center; color: brown;">{{ 'Register.vérification' | translate }}</h6>
+
+                    </div>
+                    <div class="tab">
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ 'Register.Nom' | translate }}" #nom="ngModel" ngModel  name="nom">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ 'Register.Prénom' | translate }}" #prenom="ngModel" ngModel  name="prenom">
+                        </div>
+                       
+                    </div>
+                    <div class="tab">
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-lock"></i>
+                            </span>
+                            <input
+                     
+                            class="form-control form-control-lg"
+                            placeholder="{{ 'Register.password' | translate }}"
+                            type="{{ showPassword ? 'text' : 'password' }}" id="password"
+                            #password="ngModel" ngModel name="password" required="">
+                            <div class="input-group-append">
+                              <span [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" class="form-control form-control-lg" (click)="togglePassword()">
+                                <i [style.color]="data.textbutton" class="fa fa-eye" *ngIf="showPassword"></i>
+                                <i  [style.color]="data.textbutton" class="fa fa-eye-slash" *ngIf="!showPassword"></i>
+                              </span>
+                            </div>
+
+
+</div>
+
+
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-lock"></i>
+                            </span>
+                            <input
+                     
+                            class="form-control form-control-lg"
+                            placeholder="{{ 'Register.Confirmer' | translate }}"
+                            type="{{ showPassword ? 'text' : 'password' }}"  #confirmpassword="ngModel" ngModel  name="confirmpassword" required="">
+                            <div class="input-group-append">
+                              <span [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" class="form-control form-control-lg" (click)="togglePassword()">
+                                <i [style.color]="data.textbutton" class="fa fa-eye" *ngIf="showPassword"></i>
+                                <i  [style.color]="data.textbutton" class="fa fa-eye-slash" *ngIf="!showPassword"></i>
+                              </span>
+                            </div>
+    
+                            </div>
+
+
+
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="input-group mb-3">
+                            <span  [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton"class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-home"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ 'Register.Ville' | translate }}" #ville="ngModel" ngModel  name="ville">
+                        </div>
+                       
+                    </div>
+                    <div class="tab">
+                        <div class="input-group mb-3">
+                            <span  [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton"class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </span>
+                       
+                            <input type="date" class="form-control"  #dateNaissance="ngModel" ngModel  name="dateNaissance">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i  [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton"class="fa fa-user"></i>
+                            </span>
+                            <input type="file" class="form-control"  name="photo" (change)="select($event)" >
+                        </div>
+                    </div>
+                    <div class="tab">
+
+                        <div class="input-group mb-3">
+                            <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="input-group-text">
+                                <i [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" class="fa fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="{{ 'Register.code' | translate }}" #code="ngModel" ngModel  name="code">
+                        </div>
+                    </div>
+                    <div class="tab">
+
+                       
+                            <div class="thanks-message text-center" id="text-message"  *ngIf="showvalid===true">
+                                <img  src="assets/img/ok-2282499_960_720-removebg-preview.png" width="100" class="mb-4">
+                                <h3>{{ 'Register.Merci' | translate }}</h3>
+                                
+                                <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton">{{ 'Register.informations' | translate }}</span>
+                            </div>
+                            <div class="thanks-message text-center" id="text-message"  *ngIf="showvalid===false">
+                                <img  src="assets/img/kindpng_47511.png" width="100" class="mb-4">
+                                <h3>{{ 'Register.Desolé' | translate }}</h3>
+                                <span [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton">
+                                    {{ 'Register.réessayer' | translate }} </span>
+                            </div>
+                        
+                    </div>
+                    <div style="overflow:auto;" id="nextprevious">
+                        
+                        <div style="float:right;">
+                            <button [style.borderColor]="data.backgroundcolorbutton" [style.color]="data.textbutton" [style.backgroundColor]="data.backgroundcolorbutton" type="submit" id="nextBtn" click="nextPrev(1)">{{ 'Register.ButtonSuivant' | translate }}</button>
+                        </div>
+                        
+                    </div>
+                    <div class="fix1">
+                    <div style="float:left;">
+                        <h6  routerLink="/login" style="cursor: pointer;"> {{ 'Register.login' | translate }} <i class="fa fa-arrow-right "></i></h6>
+                    </div>
+                    <br>
+                    <div style="float:left;">
+                        <h6 routerLink="/forgetPassword" style="cursor: pointer;"> {{ 'Register.ButtonOublié' | translate }} <i class="fa fa-arrow-right "></i></h6>
+                    </div>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<app-footer-componment></app-footer-componment>

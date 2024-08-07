@@ -1,0 +1,258 @@
+{
+  "updateAccount": {
+    "imagebox" : "Voici vos informations personnelles. Soyez assuré qu'ils sont protégés.",
+    "imagebox2" : "Cher(e) client(e)",
+    "personalDetails" : "Détails Personnels",
+    "Nom" : "Nom",
+    "Prénom" : "Prénom",
+    "Ville" : "Ville",
+    "Télephone" : "Télephone",
+    "DateNaissance" : "Date Naissance",
+    "ButtonModifier" : "Modifier",
+    "ButtonSupprimé" : "Supprimé"
+  },
+  "Login": {
+    "Connectez-Vous": "Connectez-Vous",
+    "numtel": "Numéro de télephone",
+    "password": "Mot de passe",
+    "ButtonSuivant": "Suivant",
+    "ButtonCréer": "Créer un compte",
+    "ButtonOublié": "Mot de passe oublié "
+  },
+  "Register": {
+    "Register": "S'inscrire",
+    "numtel": "Numéro de télephone",
+    "vérification": "Nous vous enverrons un SMS contenant un code de vérification à 6 chiffres.",
+    "Nom" : "Nom",
+    "Prénom" : "Prénom",
+    "password": "Mot de passe",
+    "Confirmer": "Confirmer mot de passe",
+    "Ville" : "Ville",
+    "DateNaissance" : "Date Naissance",
+    "ButtonSuivant": "Suivant",
+    "code": "code de Verification...",
+    "Merci": "Merci pour vos informations!",
+    "informations": "Vos informations ont été enregistrées !",
+    "Desolé": "Desolé !",
+    "réessayer": "Vos informations n'ont pas été enregistrées! Vous pouvez réessayer !",
+    "login": "Connecter à votre compte",
+    "ButtonOublié": "Mot de passe oublié "
+  },
+    "navBar": {
+      "Accueil": "Accueil",
+      "Services": "Services",
+      "Réclamation": "Réclamation",
+      "Réponse": "Réponse Réclamation",
+      "Ajouter": "Ajouter Réclamation",
+      "Liste": "Liste Réclamation",
+      "connecter": "Se connecter",
+      "inscrire": "S'inscrire",
+      "Compte": "Mon Compte",
+      "déconnecter": "Se déconnecter"
+    },
+    "home": {
+      "bienvenus": "Soyez les bienvenus",
+      "Satisfaction": "Votre Satisfaction est notre priorité",
+      "Réserver": "Réserver un Rdv",
+      "connecter": "Se connecter ici"
+    },
+    "ReviewComponent": {
+      "avis": "Donner votre avis",
+      "satisfaction": "Nous visons votre satisfaction. N'hésitez pas à nous faire part de vos avis afin que nous puissions améliorer la qualité de nos services.",
+      "Télephone": "Télephone",
+      "Service": "Service",
+      "Commentaire": "Commentaire",
+      "Envoyer": "Envoyer",
+      "AvisService": "Avis Service"
+    },
+    "AgencesComponent": {
+      "Choisir": "Choisir une agence ",
+      "Rechercher": "Rechercher: toute les agences ",
+      "villes": "Toute les villes",
+      "gouvernorats": "Touts les gouvernorats",
+      "réserver": "réserver un rdv",
+      "Ajouter": "Ajouter un Avis",
+      "Détails": "Détails de l'agence",
+      "maps": "Localisation en google maps",
+      "DétailsRDV": "Détails RDV"
+    },
+    "VoirreclamationComponent": {
+      "réclamation": "voir réclamation ",
+      "Votre": "Votre réclamation",
+      "numero": "Réclamation N°",
+      "Agence": "Agence",
+      "Objectif": "Objectif",
+      "Contenu": "Contenu",
+      "NonRepond": "Non Resolue",
+      "Resolue": "Resolue",
+      "Date": "Date",
+      "Statut": "Statut",
+      "Document": "Document",
+      "Attachment": "Attachement",
+      "noDocument": "Aucun Document"
+
+    },
+    "agendaComponent": {
+      "Réserver": "Réserver un rendez-vous ",
+      "rendez": "Reserver un rendez vous aven un de nos partenaire.",
+      "telephone": "telephone",
+      "agence": "Agence",
+      "service": "service",
+      "Sujet": "Sujet",
+      "Durée": "Choisissez Durée",
+      "duree15min": "duree 15min",
+      "duree30min": "duree 30min",
+      "duree1h": "duree 1h",
+      "Confirmer": "Confirmer",
+      "Document": "Document"
+    },
+    "ServiceslistComponent": {
+      "Choisir": "Choisir un Service",
+      "Rechercher": "Rechercher un service",
+      "Rendez": "Rendez vous",
+      "aime": "Avis"
+    },
+    "ModifierclientComponent": {
+      "Modifier": "Modifier Vos Détails Personnels",
+      "Télephone": "Télephone",
+      "Nom": "Nom",
+      "Prénom": "Prénom",
+      "Ville": "Ville",
+      "Date": "Date Naissance",
+      "Photo": "Photo de profile",
+      "bouton": "Modifier",
+      "aime": "J'aime"
+    },
+    "ReclamationComponent": {
+      "Réclamer": "Réclamer-Vous",
+      "satisfaction": "Nous visons votre satisfaction. N'hésitez pas à nous faire part de vos réclamations afin que nous puissions améliorer la qualité de nos services.",
+      "Réclamation": " Réclamation ",
+      "Télephone": "Télephone",
+      "Agence": "Agence",
+      
+      "Sujet": "Sujet",
+      "Selectionner": "Selectionner une Agence",
+      "Saisir": "Saisir le sujet de la réclamation",
+      "Description": "Description",
+      "Décrivez": "Décrivez votre réclamation",
+      "Attachment": "Attachement",
+      "Envoyer": "Envoyer",
+      "aime": "J'aime"
+    },
+    "DetailsagenceComponent": {
+      "Details": " Details de l'agence",
+      "propos": "A propos de nous",
+      "Agence": " Agence ",
+      "Télephone": "Télephone",
+      "Fax": "Fax",
+      "Chef": "Chef d'agence",
+      "Services": "Services Fournies",
+      "Saisir": "Bref description",
+      "description": "Description",
+      "travail": "Horaire de travail",
+      "Lundi": "Lundi",
+      "Mardi": "Mardi",
+      "Mercredi": "Mercredi",
+      "Vendredi": "Vendredi",
+      "Samedi": "Samedi",
+      "Jeudi": "Jeudi",
+      "Horaire":"Horaires"
+    },
+    "ForgetPasswordComponent": {
+      "Forget": " Mot de passe oublié",
+      "Password": "Mot de passe",
+      "Confirm": "Confirmez le mot de passe",
+      "Next": "Suivante",
+      "Create": "Créer un compte",
+      "Login": "Connectez-vous à votre compte"
+    },
+    
+    "RecoverPasswordComponent": {
+      "Récupérer": "Récupérer mot de passe",
+      "Phone": "Numéro de téléphone",
+      "Suivant": "Suivant",
+      "Créer": "Créer un compte",
+      "Login": "Connectez-vous à votre compte"
+    },
+    "ListReponsesComponent": {
+      "Réponses": "Vos Réponses",
+      "répondu": "Nous espérons avoir répondu efficacement à votre problème. Si toutefois le problème persiste, n'hésitez pas à nous rendre visite afin que nous puissions en discuter plus en détail. Votre satisfaction est notre priorité et nous sommes là pour vous aider.",
+      "Aujourdhui": "Aujourd'hui",
+      "reclamation": "Réponse pour reclamation N°",
+      "Agence": "Agence",
+      "Sujet": "Sujet",
+      "Description": "Description",
+      "Date": "Date réclamation",
+      "Document": "Document",
+      "noDocument": "Aucun Document",
+      "Voir": "Voir Reclamation",
+      "Attachment": "Attachement",
+
+      "Login": "Connectez-vous à votre compte"
+    },
+    "ResponseComponent": {
+      "Réponses": "Consulter Réponse",
+      "répondu": "Nous espérons avoir répondu efficacement à votre problème. Si toutefois le problème persiste, n'hésitez pas à nous rendre visite afin que nous puissions en discuter plus en détail. Votre satisfaction est notre priorité et nous sommes là pour vous aider.",
+      "Aujourdhui": "Aujourd'hui",
+      "reclamation": "Réponse pour reclamation N°",
+      "Agence": "Agence",
+      "Sujet": "Sujet",
+      "Description": "Description",
+      "Date": "Date",
+      "DateRéclamation": "Date réclamation",
+      "Document": "Document",
+      "noDocument": "Aucun Document",
+      "Attachment": "Attachement",
+
+      "Voir": "Voir Reclamation",
+      "Login": "Connectez-vous à votre compte"
+    },
+    "ListereclamationComponent": {
+      "réclamations": "Vos réclamations",
+      "répondu": "Vos réclamations sont répertoriées ci-dessous, en attente de traitement. Nous vous prions de patienter pendant que nous y apportons une réponse. Soyez assuré(e) que vous recevrez une notification dès que nous aurons apporté une réponse. Nous vous remercions sincèrement de votre patience et de votre compréhension.",
+      "Aujourdhui": "Aujourd'hui",
+      "reclama": "Réclamation N°",
+      "Agence": "Agence",
+      "Sujet": "Sujet",
+      "Description": "Description",
+      "Date": "Date",
+      "DateRéclamation": "Date réclamation",
+      "Document": "Document",
+      "noDocument": "Aucun Document",
+      "Voir": "Voir Reclamation",
+      "NonRepond": "Non Resolue",
+      "Resolue": "Resolue",
+      "Attachment": "Attachement",
+      "VoirReponse": "Voir Reponse",
+      "Statut": "Statut"
+    },
+    "AllavisComponent": {
+      "Consulter": "Consulter Avis de Service",
+      "agence": "de l'agence",
+      "à": "à",
+      "Statut": "Statut"
+    },
+    "AgendaComponent": {
+      "Consulter": "Consulter Avis de Service",
+      "agence": "de l'agence",
+      "à": "à",
+      "Statut": "Statut"
+    },
+    
+    "ErrorPageComponent": {
+      "Error": "404 Error",
+      "launch": "Impossible de lancer",
+      "Page": "Page introuvable - laissez-Nous vous guider ",
+      "BACK": " a retour à la page d'accueil"
+    },
+    "footer": {
+      "language": "Langue",
+      "developpeurs":"Conçu par Maamouri Eya et El Fekih Moulouk.",
+      "societe":"  Tout les droits sont réservés @2023"
+    },
+    "Agenda": {
+      "title": "Consulter Vos rendez-vous",
+      "explenation": "Voir tous vos rendez-vous avec cette agence en un seul endroit, cliquez sur un rendez-vous pour le supprimer.",
+      "cardtitle": "Consulter Vos rendez-vous"
+    }
+  }

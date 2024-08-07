@@ -1,0 +1,114 @@
+
+<br><br>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  
+    <!-- ... autres balises head ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <style>
+
+
+
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header id="header" class="fixed-top d-flex align-items-center ">
+
+  <app-navbar [place] = 2></app-navbar>
+
+</header><!-- End Header -->
+
+<body >
+ <div class="boxe"></div>
+  <!-- Create two div elements, one for the left part and one for the right part -->
+  <div class="left" id="map"></div>
+  <div class="right">
+    <div class="center">
+      <p class="bold" [style.color]="data.textcolor">{{ 'AgencesComponent.Choisir' | translate }} 
+
+      </p>
+
+    </div>
+
+    <div id="myDiv">
+      <div class="container">
+        
+       
+
+        <div class="search-container">
+         
+          <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onChange()"
+            placeholder="{{ 'AgencesComponent.Rechercher' | translate }}" class="dropdown-toggle" >
+            <i class="fa fa-search" [style.color]="data.textcolor"></i>
+          
+        </div>
+        <div class="aaa">
+        
+          <select  class="fix2" id="city-select" [(ngModel)]="selectedCity" (ngModelChange)="onChange()">
+            <option class="dropdown-item" style="font-weight: bold;" value="">{{ 'AgencesComponent.villes' | translate }} </option>
+            <option class="dropdown-item" *ngFor="let ville of villes" [value]="ville">{{ ville }}</option>
+          </select>
+        </div>
+        <div class="aaa">
+         
+          <select class="fix2" [(ngModel)]="selectedgouvernorat" (ngModelChange)="onChange()">
+            <option value="" style="font-weight: bold;">{{ 'AgencesComponent.gouvernorats' | translate }}</option>
+            <option *ngFor="let gouvernorat of gouvernorats" [value]="gouvernorat">{{ gouvernorat }}</option>
+          </select>
+        </div>
+ </div>
+    </div>
+
+      <div>
+
+        <br>
+        <div *ngIf="message" class="alert alert-danger">
+          {{ message}}
+        </div>
+
+        <div class="containerbox">
+
+          <div class="box" *ngFor="let agence of agences" >
+            <div class="title-container">
+              <h2>{{agence.libelle}}</h2>
+
+              <img src="../../assets/img/people.png" alt="Small image" class="small-image">
+            </div>
+            <p >{{agence.ville}}/{{agence.gouvernorat}}</p>
+
+            <div class="buttons-container">
+
+              
+              <button [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" title="{{ 'AgencesComponent.réserver' | translate }}" class="button" (click)="gotoagenda(agence.libelle,agence.code_Agence)">
+                <i class="fas fa-calendar fix fa-lg" [style.color]="data.textcolor"></i>
+              </button>
+              <button  [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" title="{{ 'AgencesComponent.Ajouter' | translate }}" class="button" (click)="review(agence.code_Agence)">
+                <i class="fas fa-star fix fa-lg" [style.color]="data.textcolor"></i>
+              </button>
+              <button [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" title="{{ 'AgencesComponent.Détails' | translate }}" class="button" (click)="gotodetails(agence.code_Agence)">
+                <i class="fas fa-info-circle fix fa-lg" [style.color]="data.textcolor"></i>
+              </button>
+              <button [style.color]="data.textbutton" style="width: 18px;" [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" title="{{ 'AgencesComponent.DétailsRDV' | translate }}" class="button" (click)="gotordv(agence.code_Agence,this.keyParams)">
+              
+                <i class="fas fa-calendar-check fix fa-lg" [style.color]="data.textcolor"></i>
+
+              </button>
+              <button [style.color]="data.textbutton"  [style.borderColor]="data.backgroundcolorbutton"  [style.backgroundColor]="data.backgroundcolorbutton" title="{{ 'AgencesComponent.maps' | translate }}" class="button" (click)="openLocationInMaps(agence.latitude, agence.longtitude)">
+                <i class="fas fa-map-marker-alt fix fa-lg" [style.color]="data.textcolor" ></i>
+              
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</body>
+<app-footer-componment></app-footer-componment>
+</html>
